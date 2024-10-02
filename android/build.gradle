@@ -2,13 +2,14 @@ group 'xyz.justsoft.video_thumbnail'
 version '1.0-SNAPSHOT'
 
 buildscript {
+    ext.kotlin_version = '2.0.20'
     repositories {
         google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.android.tools.build:gradle:8.6.1'
     }
 }
 
@@ -22,10 +23,10 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 33
-
+    namespace 'xyz.justsoft.video_thumbnail'
+    compileSdkVersion 34
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 28
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
